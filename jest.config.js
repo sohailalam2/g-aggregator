@@ -1,0 +1,20 @@
+module.exports = {
+  preset: 'ts-jest',
+  rootDir: 'src',
+  moduleFileExtensions: ['js', 'json', 'ts'],
+  modulePathIgnorePatterns: ['<rootDir>/dist'],
+  transform: { '^.+\\.(t|j)sx?$': 'ts-jest' },
+  globals: { 'ts-jest': { tsConfig: 'tsconfig.json' } },
+  coverageDirectory: '../coverage',
+  collectCoverageFrom: [
+    '**/*.ts',
+    '!**/*.spec.ts',
+    '!**/test/*.ts',
+    '!**/node_modules/**',
+    '!**/coverage/**',
+    '!**/.build/**',
+    '!**/dist/**',
+  ],
+  coveragePathIgnorePatterns: ['app.module.ts', 'main.ts'],
+  testEnvironment: 'node',
+};
