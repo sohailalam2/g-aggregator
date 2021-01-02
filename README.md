@@ -54,6 +54,10 @@ $ npm run test:cov
 
 ## API
 
+A live demo version of the application is deployed in Heroku at the following hostname:
+
+**https://morning-refuge-36684.herokuapp.com**
+
 ### Health Endpoint
 
 > GET /health
