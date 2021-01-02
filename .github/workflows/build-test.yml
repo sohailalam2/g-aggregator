@@ -78,7 +78,7 @@ jobs:
         with:
           name: build-artifact
           path: |
-            ./**/*
+            /tmp/workspace.tar.gz  
       
   deploy:
     runs-on: ubuntu-latest
