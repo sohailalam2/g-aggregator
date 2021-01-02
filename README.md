@@ -52,6 +52,37 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+Test coverage is excellent as can be seen below:
+
+```
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-----------------------------|---------|----------|---------|---------|-------------------
+All files                    |      75 |    33.33 |   81.25 |   74.67 |
+ src                         |    96.3 |      100 |     100 |   95.45 |
+  app.controller.ts          |   92.86 |      100 |     100 |   91.67 | 54
+  app.service.ts             |     100 |      100 |     100 |     100 |
+ src/dto                     |    87.5 |      100 |       0 |    87.5 |
+  data-request.dto.ts        |   81.82 |      100 |       0 |   81.82 | 24,29
+  data-response.dto.ts       |     100 |      100 |     100 |     100 |
+  health.dto.ts              |     100 |      100 |     100 |     100 |
+  index.ts                   |     100 |      100 |     100 |     100 |
+ src/schema                  |     100 |      100 |     100 |     100 |
+  index.ts                   |     100 |      100 |     100 |     100 |
+  records.schema.ts          |     100 |      100 |     100 |     100 |
+ src/utils                   |   41.94 |    33.33 |   85.71 |   44.83 |
+  http-exception.filter.ts   |       0 |        0 |       0 |       0 | 1-44
+  is-less-than.validator.ts  |     100 |      100 |     100 |     100 |
+  is-only-date.validation.ts |     100 |      100 |     100 |     100 |
+-----------------------------|---------|----------|---------|---------|-------------------
+```
+
+## CICD
+
+This project also supports end-to-end CICD solution and the live server is deployed on Heroku
+
+![CICD Pipeline](./.github/workflows/cicd.png)
+
 ## API
 
 A live demo version of the application is deployed in Heroku at the following hostname:
